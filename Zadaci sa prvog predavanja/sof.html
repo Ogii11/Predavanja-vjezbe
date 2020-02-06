@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Software Order Form</title>
+    </head>
+    <body>
+        <h1>Software Order Form</h1>
+        <form action="method.php" style="width:60%;">
+            <fieldset>
+                <legend>License details</legend>
+                <ul>
+                    <li><label for="email">Email address</label>
+                        <input type="email" name="email" id="email" required>
+                    </li>
+                    <li>
+                        <label for="web">Website</label>
+                        <input type="url" name="web" id="web" placeholder="https://www.example.com/" required>
+                    </li>
+                    <li>
+                        <label for="numofl">Number of licenses</label>
+                        <input type="text" name="numofl" id="numofl" min="1" max="10" placeholder="How many to buy(1-10)" required>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Billing details</legend>
+                <ul>
+                    <li>
+                        <label for="name">Name</label>
+                        <input type="text" name="fullname" id="name" placeholder="First Last" required>
+                    </li>
+                    <li>
+                        <label for="address">Address</label>
+                        <textarea name="address" id="address" cols="30" rows="3" placeholder="House number, street, city, state" required></textarea>
+                    </li>
+                    <li>
+                        <label for="postalCode">Postal Code</label>
+                        <input type="number" name="postalCode" id="postalCode" placeholder="Post code or zip code" required>
+                    </li>
+                    <li>
+                        <label for="country">Country</label>
+                        <select name="country" id="country" required>
+                            <option value="austraila" selected>Austraila</option>
+                            <option value="jugoslavija">Jugoslavija</option>
+                            <option value="japan">Japan</option>
+                            <option value="crnaGora">Crna Gora</option>
+                            <option value="irska">Irska</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="phone">Phone (optional)</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Include country prefix, e.g." required>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Payment details
+                </legend>
+                <ul>
+                    <li>
+                        <label for="cardnum">Card number</label>
+                        <input type="number" name="cardnnum" id="cardnum" placeholder="As shown on the front of your credit card" required>
+                    </li>
+                    <li>
+                        <label for="cvvCode">CVV code</label>
+                        <input type="number" name="cvvCode" id="cvvCode" placeholder="3-digit number on back of your credit card" required>
+                    </li>
+                    <li>
+                        <label for="exDate">Expiry date</label>
+                        <input type="number" name="exDate" id="exDate" placeholder="YYYY-MM" required>
+                    </li>
+                </ul>
+            </fieldset>
+            <input type="submit" value="Place Your Order" style="border-radius: 35px 35px 35px 35px;">
+        </form>
+    </body>
+</html>
